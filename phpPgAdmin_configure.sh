@@ -10,8 +10,12 @@
    55  sudo systemctl enable postgresql 
    56  sudo systemctl status postgresql 
    57  sudo -i -u postgres psql
-   58  sudo -i -u dbuser psql
-   59  sudo -i -u postgres psql
+
+CREATE ROLE <new_user> WITH LOGIN SUPERUSER CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD '<StrongPassword!>';
+CREATE DATABASE ed;
+\c ed;
+
+
    60  cd /etc/apache2/conf-available/
    61  sudo vi phppgadmin.conf 
    62  apachectl configtest
@@ -21,10 +25,4 @@
    66  nmap localhost
    67  cd ~
    68  history > phpPgAdmin_configure.sh
-   69  ls
-   70  vi phpPgAdmin_configure.sh 
-   71  history
-   72  vi phpPgAdmin_configure.sh 
-   73  history > phpPgAdmin_configure.sh
-   74  vi phpPgAdmin_configure.sh 
-   75  history > phpPgAdmin_configure.sh | more
+   69

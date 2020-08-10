@@ -1,0 +1,14 @@
+#add on configure hadoop 27/07/2020
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk-amd64/
+alias jps='/usr/lib/jvm/java-14-openjdk-amd64/bin/jps'
+export HADOOP_HOME=/opt/hadoop-3.3.0/
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
